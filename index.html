@@ -7,7 +7,11 @@
 <title>Нить Ариадны — Ателье</title>
 
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+<!-- AOS анимации -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -16,106 +20,133 @@
     <div class="logo">Нить Ариадны</div>
 
     <nav id="nav">
-        <a href="#main">Главное</a>
-        <a href="#process">Работа</a>
+        <a href="#services">Услуги</a>
         <a href="#portfolio">Портфолио</a>
-        <a href="#booking">Записаться</a>
+        <a href="#about">О нас</a>
         <a href="#contacts">Контакты</a>
+        <a href="#booking">Запись</a>
     </nav>
 
     <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-    <a href="#booking" class="btn">Записаться</a>
+    <a href="#booking" class="btn main-btn">Записаться</a>
 </header>
 
 <!-- HERO -->
-<section class="hero" id="main">
-    <h1>Ателье «Нить Ариадны»</h1>
+<section class="hero" data-aos="fade-up">
+    <h1>Ремонт и пошив одежды</h1>
+    <p>Идеальная посадка. Аккуратно. Быстро. С гарантией.</p>
+
+    <div class="hero-buttons">
+        <a href="#booking" class="btn main-btn">Записаться</a>
+        <a href="#portfolio" class="btn secondary-btn">Наши работы</a>
+    </div>
 </section>
 
-<!-- ЭТАПЫ -->
-<section class="section" id="process">
-    <h2>Как мы работаем</h2>
+<!-- УСЛУГИ -->
+<section class="section" id="services">
+    <h2 data-aos="fade-up">Услуги</h2>
 
     <div class="cards">
-        <div class="card">1. Приём заказа</div>
-        <div class="card">2. Согласование</div>
-        <div class="card">3. Работа мастера</div>
-        <div class="card">4. Готовый результат</div>
+        <div class="card" data-aos="zoom-in">🧵 Ремонт одежды</div>
+        <div class="card" data-aos="zoom-in">✂️ Пошив на заказ</div>
+        <div class="card" data-aos="zoom-in">📏 Подгонка по фигуре</div>
+        <div class="card" data-aos="zoom-in">👗 Сложные работы</div>
     </div>
 </section>
 
-<!-- ПОРТФОЛИО (ГОРИЗОНТАЛЬНО) -->
+<!-- КАК РАБОТАЕМ -->
+<section class="section">
+    <h2 data-aos="fade-up">Как мы работаем</h2>
+
+    <div class="steps">
+        <div class="step" data-aos="fade-up">1. Консультация</div>
+        <div class="step" data-aos="fade-up">2. Снятие мерок</div>
+        <div class="step" data-aos="fade-up">3. Примерка</div>
+        <div class="step" data-aos="fade-up">4. Готово</div>
+    </div>
+</section>
+
+<!-- ПОРТФОЛИО -->
 <section class="section" id="portfolio">
-    <h2>Портфолио</h2>
+    <h2 data-aos="fade-up">Портфолио</h2>
 
-    <div class="portfolio">
-        <div class="p-card">Работа 1</div>
-        <div class="p-card">Работа 2</div>
-        <div class="p-card">Работа 3</div>
-        <div class="p-card">Работа 4</div>
-        <div class="p-card">Работа 5</div>
+    <div class="gallery">
+        <div data-aos="fade-up"></div>
+        <div data-aos="fade-up"></div>
+        <div data-aos="fade-up"></div>
+        <div data-aos="fade-up"></div>
     </div>
 </section>
 
-<!-- ЗАПИСЬ -->
-<section class="section" id="booking">
-    <h2>Запись</h2>
+<!-- О НАС -->
+<section class="section" id="about" data-aos="fade-up">
+    <h2>О нас</h2>
+    <p>
+        Мы занимаемся ремонтом и пошивом одежды любой сложности.  
+        Работаем аккуратно, точно и с вниманием к деталям.
+    </p>
+</section>
 
-    <form action="https://formspree.io/f/xwvabaqn" method="POST" class="form">
+<!-- CTA -->
+<section class="cta" data-aos="fade-up">
+    <h2>Запишитесь на примерку уже сегодня</h2>
+    <a href="#booking" class="btn main-btn big-btn">Записаться</a>
+</section>
 
-        <input type="text" name="name" placeholder="Имя" required>
+<!-- ФОРМА -->
+<section class="section" id="booking" data-aos="fade-up">
+    <h2>Запись на примерку</h2>
+
+    <form class="form" id="contact-form" action="https://formspree.io/f/xwvabaqn" method="POST">
+
+        <input type="text" name="name" placeholder="Ваше имя" required>
 
         <input type="tel" name="phone" placeholder="Телефон" required>
 
-        <select name="branch" required>
-            <option value="">Выберите ателье</option>
-            <option value="Ульянова 114">Ульянова 114</option>
-            <option value="Гастелло 40A">Гастелло 40A</option>
-        </select>
-
         <textarea name="message" placeholder="Что нужно сделать?" required></textarea>
 
-        <input type="hidden" name="_subject" value="🧵 ЗАЯВКА — Нить Ариадны">
+        <button type="submit" class="btn main-btn big-btn" id="submit-btn">
+            Отправить заявку
+        </button>
 
-        <button type="submit">Отправить</button>
+        <p class="form-status" id="form-status"></p>
     </form>
 </section>
 
-<!-- КОНТАКТЫ + КАРТЫ -->
-<section class="section" id="contacts">
-    <h2>Контакты</h2>
+<!-- КОНТАКТЫ -->
+<section class="section contacts" id="contacts">
+    <h2 data-aos="fade-up">Контакты</h2>
 
     <div class="cards">
 
-        <div class="card">
-            <h3>Ульянова 114</h3>
-            <p>+7 (918) 615-49-45</p>
+        <div class="card" data-aos="fade-up">
+            <h3>📍 Ульянова</h3>
+            <p>ул. Ульянова, 114</p>
+            <p><a href="tel:+79186154945">+7 (918) 615-49-45</a></p>
 
-            <a class="map-btn" target="_blank"
-               href="https://maps.google.com/?q=Ульянова 114">
-               Открыть карту
-            </a>
+            <iframe src="https://maps.google.com/maps?q=ул.%20Ульянова%20114&z=15&output=embed"></iframe>
         </div>
 
-        <div class="card">
-            <h3>Гастелло 40A</h3>
-            <p>+7 (988) 164-04-33</p>
+        <div class="card" data-aos="fade-up">
+            <h3>📍 Гастелло</h3>
+            <p>ул. Гастелло, 40A</p>
+            <p><a href="tel:+79881640433">+7 (988) 164-04-33</a></p>
 
-            <a class="map-btn" target="_blank"
-               href="https://maps.google.com/?q=Гастелло 40A">
-               Открыть карту
-            </a>
+            <iframe src="https://maps.google.com/maps?q=ул.%20Гастелло%2040A&z=15&output=embed"></iframe>
         </div>
 
     </div>
 </section>
 
 <footer>
-    © 2026 Нить Ариадны
+    © 2026 Ателье «Нить Ариадны»
 </footer>
 
 <script src="script.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 </body>
 </html>
