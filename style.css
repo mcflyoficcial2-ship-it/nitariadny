@@ -1,7 +1,8 @@
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    color: #1A1A1A;
+    color: #1a1a1a;
+    background: #fff;
 }
 
 h1, h2, h3 {
@@ -32,13 +33,6 @@ nav a {
     color: black;
 }
 
-.menu-btn {
-    display: none;
-    font-size: 26px;
-    background: none;
-    border: none;
-}
-
 /* BUTTONS */
 .btn {
     padding: 12px 22px;
@@ -52,28 +46,25 @@ nav a {
     color: white;
 }
 
-.secondary-btn {
-    border: 2px solid #2E7D32;
-    color: #2E7D32;
-}
-
 /* HERO */
 .hero {
     text-align: center;
-    padding: 80px 20px;
+    padding: 90px 20px;
     background: #E8F5E9;
 }
 
 /* SECTIONS */
 .section {
     padding: 70px 20px;
+    text-align: center;
 }
 
 /* CARDS */
 .cards {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
@@ -81,40 +72,7 @@ nav a {
     min-width: 220px;
     padding: 20px;
     border: 1px solid #eee;
-    border-radius: 10px;
-}
-
-/* STEPS */
-.steps {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.step {
-    flex: 1;
-    text-align: center;
-}
-
-/* GALLERY */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
-    gap: 10px;
-}
-
-.gallery div {
-    height: 150px;
-    background: #ddd;
-    border-radius: 8px;
-}
-
-/* CTA */
-.cta {
-    background: #2E7D32;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
+    border-radius: 12px;
 }
 
 /* FORM */
@@ -126,40 +84,20 @@ nav a {
     gap: 12px;
 }
 
-.form input,
-.form textarea {
+input, textarea, select {
     padding: 12px;
     border-radius: 8px;
     border: 1px solid #ddd;
 }
 
-.form-status {
-    text-align: center;
-}
-
-/* MAP */
-iframe {
-    width: 100%;
-    height: 200px;
-    border: none;
-    margin-top: 10px;
-    border-radius: 10px;
-}
-
 /* MOBILE */
+.menu-btn {
+    display: none;
+}
+
 @media (max-width: 768px) {
     nav {
         display: none;
-        flex-direction: column;
-        position: absolute;
-        right: 20px;
-        top: 70px;
-        background: white;
-        padding: 10px;
-    }
-
-    nav.active {
-        display: flex;
     }
 
     .menu-btn {
