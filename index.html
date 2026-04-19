@@ -7,7 +7,6 @@
 <title>Нить Ариадны — Ателье</title>
 
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,66 +16,50 @@
 
     <nav id="nav">
         <a href="#services">Услуги</a>
-        <a href="#portfolio">Работы</a>
-        <a href="#about">О нас</a>
         <a href="#booking">Запись</a>
         <a href="#contacts">Контакты</a>
     </nav>
 
     <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-    <a href="#booking" class="btn main-btn">Записаться</a>
 </header>
 
 <!-- HERO -->
 <section class="hero">
     <h1>Ремонт и пошив одежды</h1>
-    <p>Идеальная посадка. Аккуратно. Премиальное качество.</p>
-    <a href="#booking" class="btn main-btn">Записаться</a>
+    <p>Быстро. Аккуратно. Качественно.</p>
 </section>
 
 <!-- УСЛУГИ -->
 <section class="section" id="services">
     <h2>Услуги</h2>
-
-    <div class="cards">
-        <div class="card">🧵 Ремонт одежды</div>
-        <div class="card">✂️ Пошив на заказ</div>
-        <div class="card">📏 Подгонка по фигуре</div>
-        <div class="card">👗 Сложные работы</div>
-    </div>
+    <p>Ремонт, пошив и подгонка одежды</p>
 </section>
 
-<!-- О НАС -->
-<section class="section" id="about">
-    <h2>О нас</h2>
-    <p>Ателье «Нить Ариадны» — это точность, качество и внимание к деталям.</p>
-</section>
-
-<!-- ЗАПИСЬ -->
+<!-- ФОРМА -->
 <section class="section" id="booking">
-    <h2>Запись на приём</h2>
+    <h2>Запись</h2>
 
     <form action="https://formspree.io/f/xwvabaqn" method="POST" class="form">
 
-        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="text" name="name" placeholder="Имя" required>
 
         <input type="tel" name="phone" placeholder="Телефон" required>
 
-        <!-- ВЫБОР ФИЛИАЛА -->
+        <!-- ФИЛИАЛ -->
         <label>Выберите ателье</label>
         <select name="branch" required>
-            <option value="">-- выберите адрес --</option>
+            <option value="">-- выберите --</option>
             <option value="Ульянова 114">Ульянова 114</option>
             <option value="Гастелло 40A">Гастелло 40A</option>
         </select>
 
         <textarea name="message" placeholder="Что нужно сделать?" required></textarea>
 
-        <!-- ТЕМА ПИСЬМА -->
-        <input type="hidden" name="_subject" value="Новая заявка — Нить Ариадны">
+        <!-- 🔥 ВАЖНО: ТЕМА ПИСЬМА -->
+        <input type="hidden" name="_subject" value="🧵 ЗАЯВКА — Нить Ариадны">
 
-        <button type="submit" class="btn main-btn">Отправить заявку</button>
+        <button type="submit">Отправить заявку</button>
+
     </form>
 </section>
 
@@ -84,19 +67,9 @@
 <section class="section" id="contacts">
     <h2>Контакты</h2>
 
-    <div class="cards">
+    <p>📍 Ульянова 114 — +7 (918) 615-49-45</p>
+    <p>📍 Гастелло 40A — +7 (988) 164-04-33</p>
 
-        <div class="card">
-            <h3>📍 Ульянова 114</h3>
-            <p><a href="tel:+79186154945">+7 (918) 615-49-45</a></p>
-        </div>
-
-        <div class="card">
-            <h3>📍 Гастелло 40A</h3>
-            <p><a href="tel:+79881640433">+7 (988) 164-04-33</a></p>
-        </div>
-
-    </div>
 </section>
 
 <footer>
