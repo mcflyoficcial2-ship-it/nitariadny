@@ -7,9 +7,7 @@
 <title>Нить Ариадны — Ателье</title>
 
 <link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -19,7 +17,7 @@
 
     <nav id="nav">
         <a href="#services">Услуги</a>
-        <a href="#portfolio">Портфолио</a>
+        <a href="#portfolio">Работы</a>
         <a href="#about">О нас</a>
         <a href="#booking">Запись</a>
         <a href="#contacts">Контакты</a>
@@ -33,12 +31,8 @@
 <!-- HERO -->
 <section class="hero">
     <h1>Ремонт и пошив одежды</h1>
-    <p>Идеальная посадка. Аккуратно. Быстро. С гарантией.</p>
-
-    <div class="hero-buttons">
-        <a href="#booking" class="btn main-btn">Записаться</a>
-        <a href="#portfolio" class="btn secondary-btn">Работы</a>
-    </div>
+    <p>Идеальная посадка. Аккуратно. Премиальное качество.</p>
+    <a href="#booking" class="btn main-btn">Записаться</a>
 </section>
 
 <!-- УСЛУГИ -->
@@ -48,67 +42,41 @@
     <div class="cards">
         <div class="card">🧵 Ремонт одежды</div>
         <div class="card">✂️ Пошив на заказ</div>
-        <div class="card">📏 Подгонка</div>
+        <div class="card">📏 Подгонка по фигуре</div>
         <div class="card">👗 Сложные работы</div>
-    </div>
-</section>
-
-<!-- КАК МЫ РАБОТАЕМ -->
-<section class="section">
-    <h2>Как мы работаем</h2>
-
-    <div class="steps">
-        <div class="step">1. Консультация</div>
-        <div class="step">2. Мерки</div>
-        <div class="step">3. Примерка</div>
-        <div class="step">4. Готово</div>
-    </div>
-</section>
-
-<!-- ПОРТФОЛИО -->
-<section class="section" id="portfolio">
-    <h2>Портфолио</h2>
-
-    <div class="gallery">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
     </div>
 </section>
 
 <!-- О НАС -->
 <section class="section" id="about">
     <h2>О нас</h2>
-    <p>
-        Ателье «Нить Ариадны» — это качественный ремонт и пошив одежды с вниманием к деталям.
-    </p>
+    <p>Ателье «Нить Ариадны» — это точность, качество и внимание к деталям.</p>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-    <h2>Запишитесь на примерку</h2>
-    <a href="#booking" class="btn main-btn big-btn">Записаться</a>
-</section>
-
-<!-- ФОРМА -->
+<!-- ЗАПИСЬ -->
 <section class="section" id="booking">
-    <h2>Запись</h2>
+    <h2>Запись на приём</h2>
 
-    <form class="form" id="contact-form" action="https://formspree.io/f/xwvabaqn" method="POST">
+    <form action="https://formspree.io/f/xwvabaqn" method="POST" class="form">
 
         <input type="text" name="name" placeholder="Ваше имя" required>
 
         <input type="tel" name="phone" placeholder="Телефон" required>
 
+        <!-- ВЫБОР ФИЛИАЛА -->
+        <label>Выберите ателье</label>
+        <select name="branch" required>
+            <option value="">-- выберите адрес --</option>
+            <option value="Ульянова 114">Ульянова 114</option>
+            <option value="Гастелло 40A">Гастелло 40A</option>
+        </select>
+
         <textarea name="message" placeholder="Что нужно сделать?" required></textarea>
 
-        <button type="submit" class="btn main-btn" id="submit-btn">
-            Отправить заявку
-        </button>
+        <!-- ТЕМА ПИСЬМА -->
+        <input type="hidden" name="_subject" value="Новая заявка — Нить Ариадны">
 
-        <p class="form-status" id="form-status"></p>
-
+        <button type="submit" class="btn main-btn">Отправить заявку</button>
     </form>
 </section>
 
@@ -121,15 +89,11 @@
         <div class="card">
             <h3>📍 Ульянова 114</h3>
             <p><a href="tel:+79186154945">+7 (918) 615-49-45</a></p>
-
-            <iframe src="https://maps.google.com/maps?q=ул.%20Ульянова%20114&z=15&output=embed"></iframe>
         </div>
 
         <div class="card">
             <h3>📍 Гастелло 40A</h3>
             <p><a href="tel:+79881640433">+7 (988) 164-04-33</a></p>
-
-            <iframe src="https://maps.google.com/maps?q=ул.%20Гастелло%2040A&z=15&output=embed"></iframe>
         </div>
 
     </div>
