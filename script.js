@@ -1,15 +1,9 @@
-// мобильное меню
+// меню
 function toggleMenu() {
     document.getElementById("nav").classList.toggle("active");
 }
 
-// анимации
-AOS.init({
-    duration: 900,
-    once: true
-});
-
-// форма отправки
+// форма
 const form = document.getElementById("contact-form");
 const statusText = document.getElementById("form-status");
 const button = document.getElementById("submit-btn");
@@ -30,15 +24,16 @@ form.addEventListener("submit", async (e) => {
         });
 
         if (res.ok) {
-            statusText.textContent = "✔ Заявка отправлена!";
+            statusText.innerText = "✔ Заявка отправлена!";
             statusText.style.color = "#2E7D32";
             form.reset();
         } else {
-            statusText.textContent = "Ошибка отправки";
+            statusText.innerText = "Ошибка отправки";
             statusText.style.color = "red";
         }
-    } catch (err) {
-        statusText.textContent = "Ошибка сети";
+
+    } catch (e) {
+        statusText.innerText = "Ошибка сети";
         statusText.style.color = "red";
     }
 
