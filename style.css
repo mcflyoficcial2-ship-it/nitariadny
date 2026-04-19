@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background: #fff;
 }
 
 header {
@@ -9,6 +10,7 @@ header {
     padding: 15px 30px;
     background: white;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: relative;
 }
 
 .logo {
@@ -56,14 +58,30 @@ button {
     cursor: pointer;
 }
 
-/* мобилка меню */
+/* мобильное меню */
 .menu-btn {
     display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
 }
 
 @media (max-width: 768px) {
+
     nav {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: white;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    nav.active {
+        display: flex;
     }
 
     .menu-btn {
